@@ -14,7 +14,9 @@ html,body {
    
     
 }
-
+.take-a-text{
+    color: blue;
+}
 /* Darkened Overlay */
 .overlay {
     position: absolute;
