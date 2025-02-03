@@ -127,7 +127,7 @@ const renderQuestion = () => {
   startTimer();
   // Update the UI
   nextQuestionBtn.style.visibility = "hidden";
-  quizContainer.querySelector(".quiz-timer").style.background = "#32313C";
+  quizContainer.querySelector(".quiz-timer").style.background = "#3b82f6";
   quizContainer.querySelector(".question-text").textContent = currentQuestion.question;
   questionStatus.innerHTML = `<b>${questionsIndexHistory.length}</b> of <b>${numberOfQuestions}</b> Questions`;
   answerOptions.innerHTML = "";
