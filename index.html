@@ -4,116 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Asovdev-Quiz-App</title>
-    <style>
-        /* Custom animation for the rolling ball */
-        @keyframes roll {
-            0% {
-                transform: rotate(0deg);
-            }
 
-            100% {
-                transform: rotate(360deg);
-            }
-        }
 
-        .rolling-ball {
-            animation: roll 10s linear infinite;
-        }
-    </style>
-</head>
+<body>
+    <!-- Darkened Overlay -->
+    <div class="overlay"></div>
 
-<body class="flex flex-col min-h-screen bg-cover bg-center relative"
-    style="background-image: url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');">
-
-    <!-- Darkened Overlay for better text visibility -->
-    <div class="absolute inset-0 bg-black/50 z-0"></div>
-
-    <!-- Navbar with solid color for visibility -->
-    <nav class="bg-blue-700 p-4 shadow-lg relative z-10">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-white text-2xl font-bold">
-                Asov-Quiz-App
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://res.cloudinary.com/de5sm2jjl/image/upload/v1738515643/pngegg_4_huzprq.png"
+                    alt="AsovBanking Logo">
+                <span>Asov-Quiz-App</span>
             </div>
-            <button
-                class="bg-white text-blue-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition duration-300">
-                Start Quiz
-            </button>
+            <button class="nav-button" id="openQuizBtn">begin quiz</button>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div
-        class="flex-grow container mx-auto mt-8 p-4 relative z-10 flex flex-col md:flex-row  bg-white  bg-opacity-80 items-center text-black-700">
+    <div class="main-content">
         <!-- Welcome Text -->
-        <div class="w-full md:w-1/2 text-center md:text-left md:p-7 m-4 ">
-            <h1 class="text-3xl font-bold">Welcome to the Quiz!</h1>
-            <p class="mt-2">Click the "Start Quiz" button to begin.</p>
-            <button
-                class="bg-blue-500 text-white-500 px-6 py-2 rounded-lg font-semibold hover:bg-blue-500 transition duration-300">
-                Start Quiz
-            </button>
+        <div class="welcome-text">
+            <h1>Welcome to the Quiz!</h1>
+            <p>Click the "begin quiz" button to begin.</p>
+            <button class="start-button" id="openQuizBtn2">begin quiz</button>
         </div>
 
-        <!-- Rolling Ball with Programming Language Images -->
-        <div class="w-full md:w-1/2 flex justify-center items-center mt-7 md:mt-0 ">
-            <div class="rolling-ball w-40 h-40 md:w-48 md:h-48 relative max-w-sm p-7">
-                <!-- JavaScript -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"
-                    class="w-12 h-12 md:w-16 md:h-16 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <!-- Golang -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" alt="Golang"
-                    class="w-12 h-12 md:w-16 md:h-16 absolute top-1/2 left-full transform -translate-x-1/2 -translate-y-1/2">
-                <!-- Python -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"
-                    class="w-12 h-12 md:w-16 md:h-16 absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
-                <!-- Ruby -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="Ruby"
-                    class="w-12 h-12 md:w-16 md:h-16 absolute top-1/2 left-0 transform translate-x-1/2 -translate-y-1/2">
-                <!-- C++ -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++"
-                    class="w-12 h-12 md:w-16 md:h-16 absolute top-0 left-0 transform translate-x-1/2 -translate-y-1/2">
-                <!-- Java -->
-                <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java"
-                    class="w-12 h-12 md:w-16 md:h-16 absolute bottom-0 left-full transform -translate-x-1/2 translate-y-1/2">
-            </div>
+        <!-- Rolling Ball -->
+        <div class="rolling-ball">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" alt="Golang">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="Ruby">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+            <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java">
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-blue-700 text-white py-6 relative z-10">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col items-center justify-between md:flex-row">
-                <div class="text-center md:text-left">
-                    <p class="text-sm">
-                        &copy; 2025 Quiz App. All rights reserved.
-                    </p>
-                </div>
-
-                <!-- Social Media Icons -->
-                <div class="flex space-x-4 mt-4 md:mt-0">
-                    <a href="#" class="text-white hover:text-gray-300 transition duration-300">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="text-white hover:text-gray-300 transition duration-300">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-white hover:text-gray-300 transition duration-300">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="text-white hover:text-gray-300 transition duration-300">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
+    <footer>
+        <div class="footer-container ">
+            <p>&copy; 2025 Quiz App. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Add interactive functionality here if needed
-    </script>
+    <!-- Quiz Configuration Popup -->
+    <div class="config-popup popup-container" id="configPopup">
+
+        <div class="config-container quiz-box">
+            <!-- Close Button -->
+            <button class="close-btn" id="closeConfigPopup">X</button>
+            <h2 class="config-title">Programming Lang</h2>
+            <div class="config-option">
+                <h4 class="option-title">Select Category</h4>
+                <div class="category-options">
+                    <button class="category-option active">JavaScript</button>
+                    <button class="category-option">Python</button>
+                    <button class="category-option">Golang</button>
+                    <button class="category-option">Rust</button>
+                    <button class="category-option">Java</button>
+                    <button class="category-option">C++</button>
+                </div>
+            </div>
+            <div class="config-option">
+                <h4 class="option-title">No. of Questions</h4>
+                <div class="question-options">
+                    <button class="question-option active">5</button>
+                    <button class="question-option">50</button>
+                </div>
+            </div>
+            <button class="start-quiz-btn" id="startQuizBtn">Start Quiz</button>
+        </div>
+    </div>
+
+    <!-- Quiz Popup -->
+    <div class="quiz-popup popup-container">
+        <div class="quiz-container quiz-box">
+            <header class="quiz-header">
+                <h2 class="quiz-title">Quiz Application</h2>
+                <div class="quiz-timer">
+                    <span class="material-symbols-rounded">timer</span>
+                    <p class="timer-duration"></p>
+                </div>
+            </header>
+            <div class="quiz-content">
+                <h1 class="question-text"></h1>
+                <ul class="answer-options"></ul>
+            </div>
+            <div class="quiz-footer">
+                <p class="question-status"></p>
+                <button class="next-question-btn">
+                    Next
+                    <span class="material-icons">arrow_right_alt</span>
+                </button>
+                <button class="close-quiz-btn  " id="closeQuizBtn">
+                    Close Quiz
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Result Popup -->
+    <div class="result-popup popup-container">
+        <div class="result-container quiz-box">
+            <img src="https://res.cloudinary.com/de5sm2jjl/image/upload/v1738515661/pngegg_2_b8ruwy.png"
+                class="result-img w-28 mx-auto items-center" />
+            <h2 class="result-title">Quiz Completed!</h2>
+            <p class="result-message"></p>
+            <button class="try-again-btn">Try Again</button>
+        </div>
+    </div>
+
+    <script src="questions.js" defer></script>
+    <script src="script.js" defer></script>
 
 </body>
 
