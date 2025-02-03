@@ -26,7 +26,7 @@ This quiz app features the following programming languages:
 
 This quiz helps you test your programming knowledge. Here's how to get started:
 
-1. **Learn the Basics:** Click the "Info" button on the landing page for a quick overview of how the quiz works.
+1. **Learn the Basics:** Click the "nav" button on the landing page .
 
 2. **Start the Quiz:**
     * Click the "Begin Quiz" button.

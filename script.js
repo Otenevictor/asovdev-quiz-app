@@ -10,6 +10,8 @@ const questionStatus = quizContainer.querySelector(".question-status");
 const timerDisplay = quizContainer.querySelector(".timer-duration");
 const resultContainer = document.querySelector(".result-container");
 
+
+
  // JavaScript to close the config popup
     const closeConfigPopup = document.getElementById('closeConfigPopup');
     const configPopup = document.getElementById('configPopup');
