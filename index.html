@@ -25,6 +25,7 @@
                     alt="AsovBanking Logo">
                 <span>Asov-Quiz-App</span>
             </div>
+            <!-- <button class="start-button" id="infoQuiz">begin quiz</button> -->
             <button class="nav-button" id="openQuizBtn">begin quiz</button>
         </div>
     </nav>
@@ -36,9 +37,24 @@
         <div class="welcome-text">
             <h1>Welcome take a Programming Quiz!</h1>
             <p>Click the "begin quiz" button to <span class="take-a-text">take a test</span>.</p>
+            <button class="start-button" id="infoQuiz">Quiz Info</button>
             <button class="start-button" id="openQuizBtn2">begin quiz</button>
         </div>
-
+<!-- Popup Modal -->
+<div id="quizPopup" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Quiz Rules</h2>
+      <ul>
+        <li><b>Choose Questions:</b> 5 or 50 question choice to practice .</li>
+        <li><b>Timed Questions:</b> You have 15 seconds to answer each question.</li>
+        <li><b>Single Choice:</b> Once you select an answer, you cannot change it.</li>
+        <li><b>Time Limit:</b> You cannot select an option after the 15-second timer expires.</li>
+        <li><b>No Exit:</b> You cannot exit the quiz while it is in progress.</li>
+        <li><b>Scoring:</b> Your score is calculated based on the number of correct answers you provide.</li>
+      </ul>
+    </div>
+  </div>
         <!-- Rolling Ball -->
         <div class="rolling-ball">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
@@ -132,6 +148,8 @@
 
     <script src="questions.js" defer></script>
     <script src="script.js" defer></script>
+    <script src="pop.js" defer></script>
+
 
 </body>
 
